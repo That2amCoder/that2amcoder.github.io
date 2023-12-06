@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VU CS Purity Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: lightblue;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .result-container {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #calculate-btn {
+            margin-right: 10px;
+        }
+
+        #clear-all-btn {
+            margin-left: 10px;
+        }
+
+        #logo {
+            width: 800px;
+            height: 80px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/39/VU_logo.png" alt="VU logo">
+    <h1>VU CS Purity Test</h1>
+
+    <form id="purity-test-form">
+        <div class="question">
+            <input type="checkbox" id="check1" /><label for="check1">Have you ever denied someone else credit for their coding contribution?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check2" /><label for="check2">Have you ever used your coding skills to impress someone on a date?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check3" /><label for="check3">Have you ever fallen asleep in a lecture or seminar for a computer science course?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check6" /><label for="check6">Have you ever hacked someone else's computer without their permission?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check7" /><label for="check7">Have you ever skipped class to work on a personal coding project?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check8" /><label for="check8">Have you ever sabotaged someone else's code?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check9" /><label for="check9">Have you ever knowingly plagiarized code for an assignment?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check10" /><label for="check10">Have you ever taken advantage of a group project to have others do most of the coding work?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check11" /><label for="check11">Have you ever used coding jargon to try and impress someone outside of the computer science field?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check12" /><label for="check12">Have you ever lied about your coding experience on a resume or job application?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check13" /><label for="check13">Have you ever successfully completed a coding task while under the influence of alcohol or drugs?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check14" /><label for="check14">Have you ever used a program or app for malicious purposes?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check15" /><label for="check15">Have you ever bullshitted your way through a coding assignment or exam?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check16" /><label for="check16">Have you ever manipulated coding data to support your own agenda?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check17" /><label for="check17">Have you ever stolen someone else's code and claimed it as your own?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check20" /><label for="check20">Have you ever made fun of a non-coder for not understanding basic coding concepts?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check21" /><label for="check21">Have you ever used coding as an excuse to procrastinate on other tasks?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check22" /><label for="check22">Have you ever judged someone else's coding ability based on their appearance or gender?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check23" /><label for="check23">Have you ever used coding skills to spy on someone else's online activity?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check28" /><label for="check28">Have you ever been the cause of a coding error or bug in a program?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check30" /><label for="check30">Have you ever taken coding shortcuts to meet a deadline without telling your teammates?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check32" /><label for="check32">Have you ever looked through someone else's code without their permission?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check39" /><label for="check39">Have you ever used coding to assist in academic dishonesty, such as cheating on a test?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check42" /><label for="check42">Have you ever kissed anybody on-campus?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check43" /><label for="check43">Have you ever had a sexual activity on-campus?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check44" /><label for="check44">Have you ever had a sexual activity with a member of faculty?</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="check45" /><label for="check45">Have you ever had a one-night stand with someone in your computer science program?</label>
+        </div>
+
+        <div class="button-container">
+            <button type="button" id="calculate-btn">Calculate</button>
+            <button type="button" id="clear-all-btn">Clear All</button>
+        </div>
+
+        <div class="result-container">
+            <p id="result-msg"></p>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("calculate-btn").addEventListener("click", function () {
+            var checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+            var count = 0;
+
+            for (var i = 0; i < checkBoxes.length; i++) {
+                if (checkBoxes[i].checked) {
+                    count++;
+                }
+            }
+
+            var resultMsg = document.getElementById("result-msg");
+            resultMsg.textContent = "Your purity score is: " + count + "/26";
+        });
+
+        document.getElementById("clear-all-btn").addEventListener("click", function () {
+            var checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+
+            for (var i = 0; i < checkBoxes.length; i++) {
+                checkBoxes[i].checked = false;
+            }
+
+            var resultMsg = document.getElementById("result-msg");
+            resultMsg.textContent = "";
+        });
+    </script>
+</body>
+
+</html>
