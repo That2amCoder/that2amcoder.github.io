@@ -45,10 +45,18 @@
         }
 
         #logo {
-            width: 800px;
+            width: 80px;
             height: 80px;
             display: block;
             margin: 0 auto;
+        }
+
+        .flashy-warning {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -141,6 +149,8 @@
             <input type="checkbox" id="check45" /><label for="check45">Have you ever had a one-night stand with someone in your computer science program?</label>
         </div>
 
+        <div class="flashy-warning" id="plagiarism-warning" style="display: none;">Your VUNET ID has been recorded and the exam board has been alerted.</div>
+
         <div class="button-container">
             <button type="button" id="calculate-btn">Calculate</button>
             <button type="button" id="clear-all-btn">Clear All</button>
@@ -176,6 +186,12 @@
             var resultMsg = document.getElementById("result-msg");
             resultMsg.textContent = "";
         });
+
+         // Show warning when plagiarism checkbox is clicked
+         document.getElementById("check9").addEventListener("click", function () {
+                var plagiarismWarning = document.getElementById("plagiarism-warning");
+                plagiarismWarning.style.display = this.checked ? "block" : "none";
+            });
     </script>
 </body>
 
